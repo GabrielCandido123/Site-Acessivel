@@ -26,9 +26,11 @@ main {
 
 #form-title {
   margin-bottom: 10px;
+  padding: 5px;
 }
 #form-desc {
   margin-bottom: 10px;
+  padding: 5px;
 }
 form {
   display: flex;
@@ -65,5 +67,5 @@ button:hover {
 fieldset {
   margin: 1%;
   padding: 1%;
-  border-radius: 10px;
+  border-radius: 4px;
 }
