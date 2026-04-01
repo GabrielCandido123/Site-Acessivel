@@ -21,20 +21,24 @@ main {
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 400px;
+  width: 500px;
 }
 
 #form-title {
   margin-bottom: 10px;
   padding: 5px;
+  text-align: center;
 }
 #form-desc {
   margin-bottom: 10px;
   padding: 5px;
+  text-align: center;
 }
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 label {
