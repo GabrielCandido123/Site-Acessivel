@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabela acessivel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- O nav armazena o menu de navegação e usa aria-label para identificação -->
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Formulário de Cadastro</a></li>
+                <!-- aria-current="page" informa ao leitor de tela que estamos nesta página -->
+                <li><a href="tabela.html" aria-current="page">Cardápio Acessível</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         <h1>Cardápio do Restaurante</h1>
+        <section aria-labelledby="titulo-cardapio">
+            <h2 id="titulo-cardapio">Nossos Pratos</h2>
+            
+            <!-- A tag <table> possui role="table" e aria-label para informar o leitor de tela do que se trata -->
+            <table role="table" aria-label="Cardápio com preços dos pratos principais" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <!-- <caption> é a melhor forma de descrever a tabela para leitores de tela -->
+                <caption style="text-align: left; padding: 10px 0; font-weight: bold;">
+                    Lista de pratos principais e seus valores
+                </caption>
+                
+                <thead style="background-color: #f2f2f2;">
+                    <!-- role="row" identifica a linha -->
+                    <tr role="row">
+                        <!-- scope="col" indica que este cabeçalho rege toda a coluna e role="columnheader" reforça o significado -->
+                        <th scope="col" role="columnheader" style="padding: 12px; border: 1px solid #ddd; text-align: left;">Prato</th>
+                        <th scope="col" role="columnheader" style="padding: 12px; border: 1px solid #ddd; text-align: left;">Descrição</th>
+                        <th scope="col" role="columnheader" style="padding: 12px; border: 1px solid #ddd; text-align: left;">Preço</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr role="row">
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">Feijoada</td>
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">Feijão preto com carnes, acompanha arroz e farofa</td>
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">R$ 45,00</td>
+                    </tr>
+                    <tr role="row">
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">Lasanha</td>
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">Massa caseira com molho à bolonhesa</td>
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">R$ 38,00</td>
+                    </tr>
+                    <tr role="row">
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">Salada Tropical</td>
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">Folhas verdes, manga, tomate cereja e molho especial</td>
+                        <td role="cell" style="padding: 12px; border: 1px solid #ddd;">R$ 28,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

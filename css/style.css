@@ -8,12 +8,48 @@
 body {
   /*centralizando form no meio da tela*/
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Alterado para coluna para o header ficar no topo */
   align-items: center;
+  justify-content: flex-start; /* Alterado de center para flex-start para o conteúdo subir se necessário, ou podemos manter um gap */
   min-height: 100vh;
   background-color: #f4f4f9;
   font-family: Arial, sans-serif;
 }
+
+header {
+  width: 100%;
+  background-color: #333;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza o menu no topo */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a[aria-current="page"] {
+  color: #4da3ff;
+  border-bottom: 2px solid #4da3ff;
+}
+
+nav a:hover {
+  color: #4da3ff;
+}
+
 
 main {
   border: 1px solid #333;
